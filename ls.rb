@@ -68,7 +68,7 @@ class LsCommand
       uid = Etc.getpwuid(stat.uid).name.ljust(7)
 
       # グループ名
-      group = Etc.getgrgid(stat.gid).name
+      group = stat.gid
 
       # ファイルサイズ
       size = stat.size.to_s.rjust(5)
